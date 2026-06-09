@@ -2,880 +2,377 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Buiar Komoni | Digital CV</title>
-    <meta name="description" content="CV digitale di Buiar Komoni, informatico di gestione e profilo professionale con esperienza commerciale e logistica.">
-    <meta name="theme-color" content="#16161a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta property="og:title" content="Buiar Komoni | Digital CV">
-    <meta property="og:description" content="CV digitale di Buiar Komoni, informatico di gestione e profilo professionale con esperienza commerciale e logistica.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://buiarkomoni.github.io/img/profilo.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Buiar Komoni | Digital CV">
-    <meta name="twitter:description" content="CV digitale di Buiar Komoni, informatico di gestione e profilo professionale con esperienza commerciale e logistica.">
-    <meta name="twitter:image" content="https://buiarkomoni.github.io/img/profilo.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* ── Tailwind Utility Replacement ── */
-        /* Display/Position */
-        .block { display: block; }
-        .hidden { display: none; }
-        .flex { display: flex; }
-        .flex-col { flex-direction: column; }
-        .flex-1 { flex: 1 1 0%; }
-        .flex-wrap { flex-wrap: wrap; }
-        .inline-block { display: inline-block; }
-        .grid { display: grid; }
-        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-        .contents { display: contents; }
-        .relative { position: relative; }
-        .absolute { position: absolute; }
-        .fixed { position: fixed; }
-        .sticky { position: sticky; }
-        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-        .shrink-0 { flex-shrink: 0; }
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        .object-cover { object-fit: cover; }
-        .overflow-hidden { overflow: hidden; }
-        .overflow-x-hidden { overflow-x: hidden; }
-        .overflow-y-auto { overflow-y: auto; }
-        .pointer-events-none { pointer-events: none; }
-        .cursor-pointer { cursor: pointer; }
-        .origin-center { transform-origin: center; }
-        .-left-\[9px\] { left: -9px; }
-        .right-6 { right: 1.5rem; }
-        .right-10 { right: 2.5rem; }
-        .top-1 { top: 0.25rem; }
-        .top-0 { top: 0; }
-        .w-full { width: 100%; }
-        .w-fit { width: fit-content; }
-        .w-auto { width: auto; }
-        .w-4 { width: 1rem; }
-        .w-5 { width: 1.25rem; }
-        .w-6 { width: 1.5rem; }
-        .w-7 { width: 1.75rem; }
-        .w-12 { width: 3rem; }
-        .w-32 { width: 8rem; }
-        .h-full { height: 100%; }
-        .h-4 { height: 1rem; }
-        .h-5 { height: 1.25rem; }
-        .h-7 { height: 1.75rem; }
-        .h-12 { height: 3rem; }
-        .h-32 { height: 8rem; }
-        .h-[2px] { height: 2px; }
-        .max-h-0 { max-height: 0; }
-        .max-w-[280px] { max-width: 280px; }
-        .z-0 { z-index: 0; }
-        .z-10 { z-index: 10; }
-        .z-20 { z-index: 20; }
-        .z-40 { z-index: 40; }
-        .z-50 { z-index: 50; }
-        .mx-auto { margin-left: auto; margin-right: auto; }
-        .my-4 { margin-top: 1rem; margin-bottom: 1rem; }
-        .ml-3 { margin-left: 0.75rem; }
-        .mt-1 { margin-top: 0.25rem; }
-        .mt-6 { margin-top: 1.5rem; }
-        .mt-16 { margin-top: 4rem; }
-        .mb-1 { margin-bottom: 0.25rem; }
-        .mb-2 { margin-bottom: 0.5rem; }
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .p-0 { padding: 0; }
-        .p-4 { padding: 1rem; }
-        .p-8 { padding: 2rem; }
-        .p-10 { padding: 2.5rem; }
-        .px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
-        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .pb-0 { padding-bottom: 0; }
-        .pb-4 { padding-bottom: 1rem; }
-        .pb-6 { padding-bottom: 1.5rem; }
-        .pl-8 { padding-left: 2rem; }
-        .pt-10 { padding-top: 2.5rem; }
-        .pt-16 { padding-top: 4rem; }
-        .gap-1\:5 { gap: 0.375rem; }
-        .gap-2 { gap: 0.5rem; }
-        .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1rem; }
-        .gap-6 { gap: 1.5rem; }
-        .gap-10 { gap: 2.5rem; }
-        .space-y-4 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(1rem * var(--tw-space-y-reverse)); }
-        .space-y-6 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(1.5rem * var(--tw-space-y-reverse)); }
-        .space-y-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(2rem * var(--tw-space-y-reverse)); }
-        .space-y-10 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(2.5rem * var(--tw-space-y-reverse)); }
-        .space-y-12 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(3rem * var(--tw-space-y-reverse)); }
-        .text-center { text-align: center; }
-        .uppercase { text-transform: uppercase; }
-        .text-xs { font-size: 0.75rem; }
-        .text-sm { font-size: 0.875rem; }
-        .text-lg { font-size: 1.125rem; }
-        .text-xl { font-size: 1.25rem; }
-        .text-3xl { font-size: 1.875rem; }
-        .text-5xl { font-size: 3rem; }
-        .text-\[10px\] { font-size: 10px; }
-        .font-medium { font-weight: 500; }
-        .font-semibold { font-weight: 600; }
-        .font-bold { font-weight: 700; }
-        .font-black { font-weight: 900; }
-        .leading-none { line-height: 1; }
-        .leading-relaxed { line-height: 1.625; }
-        .tracking-tighter { letter-spacing: -0.05em; }
-        .tracking-wider { letter-spacing: 0.05em; }
-        .tracking-widest { letter-spacing: 0.1em; }
-        .tracking-\[0\.15em\] { letter-spacing: 0.15em; }
-        .tracking-\[0\.2em\] { letter-spacing: 0.2em; }
-        .text-white { color: #fff; }
-        .text-white\/40 { color: rgba(255,255,255,0.4); }
-        .text-gray-200 { color: #e5e7eb; }
-        .text-gray-300 { color: #d1d5db; }
-        .text-gray-400 { color: #9ca3af; }
-        .text-gray-500 { color: #6b7280; }
-        .text-\[\#98DA4B\] { color: #98DA4B; }
-        .text-\[\#8BC34A\] { color: #8BC34A; }
-        .bg-black { background-color: #000; }
-        .bg-black\/45 { background-color: rgba(0,0,0,0.45); }
-        .bg-white { background-color: #fff; }
-        .bg-white\/30 { background-color: rgba(255,255,255,0.3); }
-        .bg-\[\#8BC34A\] { background-color: #8BC34A; }
-        .border { border-width: 1px; }
-        .border-0 { border-width: 0; }
-        .border-2 { border-width: 2px; }
-        .border-b { border-bottom-width: 1px; }
-        .border-t { border-top-width: 1px; }
-        .border-l-2 { border-left-width: 2px; }
-        .border-white\/10 { border-color: rgba(255,255,255,0.1); }
-        .border-white\/20 { border-color: rgba(255,255,255,0.2); }
-        .border-white\/30 { border-color: rgba(255,255,255,0.3); }
-        .border-white\/50 { border-color: rgba(255,255,255,0.5); }
-        .rounded-none { border-radius: 0; }
-        .rounded-2xl { border-radius: 1rem; }
-        .rounded-\[2\.5rem\] { border-radius: 2.5rem; }
-        .rounded-3xl { border-radius: 1.5rem; }
-        .rounded-full { border-radius: 9999px; }
-        .opacity-0 { opacity: 0; }
-        .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgba(0,0,0,0.04)) drop-shadow(0 4px 3px rgba(0,0,0,0.1)); }
-        .drop-shadow-md { filter: drop-shadow(0 4px 3px rgba(0,0,0,0.07)) drop-shadow(0 2px 2px rgba(0,0,0,0.06)); }
-        .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4,0,0.2,1); }
-        .transition-colors { transition-property: color,background-color,border-color,text-decoration-color,fill,stroke; transition-timing-function: cubic-bezier(0.4,0,0.2,1); }
-        .transition-opacity { transition-property: opacity; transition-timing-function: cubic-bezier(0.4,0,0.2,1); }
-        .duration-300 { transition-duration: 300ms; }
-        .duration-500 { transition-duration: 500ms; }
-        .blur-sm { filter: blur(4px); }
-        .backdrop-blur-2xl { -webkit-backdrop-filter: blur(40px); backdrop-filter: blur(40px); }
-        .backdrop-blur-none { -webkit-backdrop-filter: none; backdrop-filter: none; }
-        .shadow-\[0_0_10px_rgba\(139\,195\,74\,0\.8\)\] { box-shadow: 0 0 10px rgba(139,195,74,0.8); }
-        .shadow-\[0_0_50px_rgba\(0\,0\,0\,0\.5\)\] { box-shadow: 0 0 50px rgba(0,0,0,0.5); }
-        .hover\:scale-110:hover { transform: scale(1.1); }
-        .hover\:text-\[\#98DA4B\]:hover { color: #98DA4B; }
-        .hover\:text-white:hover { color: #fff; }
-        .group:hover .group-hover\:opacity-100 { opacity: 1; }
-        .group:hover .group-hover\:max-h-20 { max-height: 5rem; }
-        .group:hover .group-hover\:max-h-24 { max-height: 6rem; }
-        .overscroll-contain { overscroll-behavior: contain; }
-        @media (min-width: 640px) {
-            .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        :root {
+            /* IL TUO VERDE "FILE LOCALI" */
+            --accent: #84cc16; 
+            --accent-dim: rgba(132, 204, 22, 0.15);
+            --accent-border: rgba(132, 204, 22, 0.3);
+            
+            /* Glass & UI Colors */
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+            --text-primary: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --radius: 24px;
+            --blur-strength: 30px;
         }
-        @media (min-width: 768px) {
-            .md\:block { display: block; }
-            .md\:hidden { display: none; }
-            .md\:flex { display: flex; }
-            .md\:flex-row { flex-direction: row; }
-            .md\:h-full { height: 100%; }
-            .md\:h-48 { height: 12rem; }
-            .md\:w-1\/3 { width: 33.333333%; }
-            .md\:w-48 { width: 12rem; }
-            .md\:overflow-hidden { overflow: hidden; }
-            .md\:overflow-y-auto { overflow-y: auto; }
-            .md\:border { border-width: 1px; }
-            .md\:border-0 { border-width: 0; }
-            .md\:border-b-0 { border-bottom-width: 0; }
-            .md\:border-r { border-right-width: 1px; }
-            .md\:border-white\/30 { border-color: rgba(255,255,255,0.3); }
-            .md\:rounded-\[4\.5rem\] { border-radius: 4.5rem; }
-            .md\:p-0 { padding: 0; }
-            .md\:p-12 { padding: 3rem; }
-            .md\:p-\[5vh\] { padding: 5vh; }
-            .md\:pt-0 { padding-top: 0; }
-            .md\:pt-12 { padding-top: 3rem; }
-            .md\:mt-0 { margin-top: 0; }
-            .md\:mb-6 { margin-bottom: 1.5rem; }
-            .md\:text-sm { font-size: 0.875rem; }
-            .md\:text-5xl { font-size: 3rem; }
-            .md\:no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-            .md\:backdrop-blur-none { -webkit-backdrop-filter: none; backdrop-filter: none; }
-            .md\:shadow-\[0_0_80px_rgba\(0\,0\,0\,0\.6\)\,inset_0_1\.5px_0_rgba\(255\,255\,255\,0\.45\)\,inset_0_0_3px_rgba\(255\,255\,255\,0\.3\)\] { box-shadow: 0 0 80px rgba(0,0,0,0.6), inset 0 1.5px 0 rgba(255,255,255,0.45), inset 0 0 3px rgba(255,255,255,0.3); }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --glass-bg: rgba(28, 28, 30, 0.75);
+                --glass-border: rgba(255, 255, 255, 0.1);
+                --text-primary: #f5f5f7;
+                --text-secondary: #a1a1a6;
+                --accent-dim: rgba(132, 204, 22, 0.1);
+            }
         }
-        @media (min-width: 1024px) {
-            .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        }
-        html { height: 100%; margin: 0; padding: 0; background: #16161a; overflow: hidden; overscroll-behavior: none; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        
         body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #16161a;
-            background-image: url('img/home.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f2f2f7;
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* Liquid Background Animation */
+        .liquid-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
             overflow: hidden;
-            overscroll-behavior: none;
+            background: linear-gradient(135deg, #eef2f3 0%, #d9e2ec 100%);
         }
-        @media (min-width: 768px) {
-            body {
-                background-image: url('img/home-landscape.jpeg');
-            }
-        }
-        #root { position: fixed; inset: 0; overscroll-behavior: none; overflow: hidden; }
-
-        /* ── iOS safe areas ── */
-        @media (max-width: 767px) {
-            #mob-header {
-                padding-top: max(2rem, env(safe-area-inset-top)) !important;
-            }
-            #mob-header.scrolled {
-                flex-direction: row !important;
-                align-items: center !important;
-                padding-top: max(0.75rem, calc(env(safe-area-inset-top) - 0.5rem)) !important;
-                padding-bottom: 0.75rem !important;
-                padding-left: 1.5rem !important;
-                padding-right: 4.5rem !important;
-                gap: 1rem !important;
-                background: rgba(0,0,0,0.75) !important;
-                backdrop-filter: blur(28px) saturate(180%) !important;
-                -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
-                border-bottom: 1px solid rgba(255,255,255,0.12) !important;
-                box-shadow: inset 0 1px 0 rgba(255,255,255,0.20), 0 4px 16px rgba(0,0,0,0.30) !important;
-            }
-            #mob-header.scrolled #mob-logo {
-                width: 3rem !important;
-                height: 3rem !important;
-                margin-bottom: 0 !important;
-            }
-            #mob-header.scrolled #mob-name {
-                font-size: 1.15rem !important;
-                margin-bottom: 0 !important;
-            }
-            .ham-btn {
-                top: max(1.5rem, calc(env(safe-area-inset-top) - 0.5rem)) !important;
-                transition: all 0.3s ease !important;
-            }
-            #mob-header.scrolled .ham-btn {
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-                margin-top: 0 !important;
-            }
-            .overlay-close-btn {
-                top: max(2.5rem, calc(env(safe-area-inset-top) + 0.5rem)) !important;
-            }
-            #mob-scroll {
-                padding-bottom: env(safe-area-inset-bottom);
-            }
+        @media (prefers-color-scheme: dark) {
+            .liquid-bg { background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%); }
         }
 
-        /* ── Responsive Panels (Uniform Mobile Blur) ── */
-        .sidebar-panel {
-            display: contents !important;
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-            border-color: rgba(255,255,255,0.12);
+        .blob {
+            position: absolute;
+            filter: blur(90px);
+            opacity: 0.6;
+            animation: float 25s infinite ease-in-out alternate;
+            border-radius: 50%;
         }
-        @media (min-width: 768px) {
-            .sidebar-panel {
-                display: flex !important;
-                background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(10,10,20,0.45) 100%) !important;
-                backdrop-filter: blur(40px) saturate(180%) brightness(0.95) !important;
-                -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(0.95) !important;
-            }
-        }
-        .content-panel {
-            background: transparent;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-        }
-        @media (min-width: 768px) {
-            .content-panel {
-                background: rgba(0,0,0,0.25) !important;
-                backdrop-filter: blur(8px) saturate(160%) !important;
-                -webkit-backdrop-filter: blur(8px) saturate(160%) !important;
-            }
+        /* Blob colorati per dare profondità al vetro */
+        .blob-1 { top: -10%; left: -10%; width: 60vw; height: 60vw; background: var(--accent); opacity: 0.25; animation-delay: 0s; }
+        .blob-2 { bottom: -10%; right: -10%; width: 70vw; height: 70vw; background: #3b82f6; opacity: 0.15; animation-delay: -5s; }
+        .blob-3 { top: 30%; left: 30%; width: 50vw; height: 50vw; background: #f472b6; opacity: 0.15; animation-delay: -10s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 60px) scale(1.15); }
         }
 
-        /* ── Liquid Glass base (Apple iOS 26 style) ── */
-        .glass {
-            background: linear-gradient(
-                145deg,
-                rgba(255,255,255,0.22) 0%,
-                rgba(255,255,255,0.08) 55%,
-                rgba(255,255,255,0.14) 100%
-            ) !important;
-            backdrop-filter: blur(32px) saturate(200%) brightness(1.08) !important;
-            -webkit-backdrop-filter: blur(32px) saturate(200%) brightness(1.08) !important;
-            border: 1px solid rgba(255,255,255,0.28) !important;
-            box-shadow:
-                inset 0 1.5px 0 rgba(255,255,255,0.55),
-                inset 0 -1px 0 rgba(255,255,255,0.08),
-                inset 1px 0 rgba(255,255,255,0.18),
-                inset -1px 0 rgba(255,255,255,0.06),
-                0 12px 40px rgba(0,0,0,0.35),
-                0 3px 10px rgba(0,0,0,0.18) !important;
+        /* Layout & Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 120px;
         }
 
-        /* ── Bubble ── */
-        .bubble {
-            border-radius: 9999px !important;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            display: inline-block;
-            text-align: center;
-            text-decoration: none !important;
+        /* Glass Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--blur-strength)) saturate(180%);
+            -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            box-shadow: var(--glass-shadow);
+            padding: 28px;
+            margin-bottom: 20px;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
         }
-        .bubble:hover {
-            background: rgba(255,255,255,0.15) !important;
-            transform: scale(1.05) translateY(-2px) !important;
-        }
-
-        /* ── Skill / Accent cards — liquid glass ── */
-        .skill-card,
-        .accent-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: linear-gradient(
-                135deg,
-                rgba(255,255,255,0.14) 0%,
-                rgba(255,255,255,0.05) 100%
-            ) !important;
-            backdrop-filter: blur(20px) saturate(180%) !important;
-            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-            border: 1px solid rgba(255,255,255,0.22) !important;
-            box-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.42),
-                inset 0 -1px 0 rgba(255,255,255,0.06),
-                0 6px 24px rgba(0,0,0,0.28),
-                0 2px 6px rgba(0,0,0,0.12) !important;
+        .glass-card:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
         }
 
-        .skill-card:hover,
-        .skill-card:active,
-        .skill-card:focus,
-        .skill-card.active-touch,
-        .accent-card:hover,
-        .accent-card:active,
-        .accent-card:focus,
-        .accent-card.active-touch {
-            background: linear-gradient(
-                135deg,
-                rgba(152,218,75,0.22) 0%,
-                rgba(255,255,255,0.10) 55%,
-                rgba(152,218,75,0.12) 100%
-            ) !important;
-            border-color: rgba(152,218,75,0.60) !important;
-            box-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.50),
-                inset 0 -1px 0 rgba(152,218,75,0.12),
-                0 0 0 1px rgba(152,218,75,0.20),
-                0 12px 36px rgba(15,23,42,0.45),
-                0 0 20px rgba(152,218,75,0.12) !important;
-            outline: none;
+        /* Header Profile */
+        .profile-header { text-align: center; padding: 40px 20px; }
+        .avatar {
+            width: 110px; height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 0 4px var(--glass-bg), 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            background: #fff;
+        }
+        h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+        .subtitle { 
+            font-size: 0.85rem; 
+            color: var(--accent); 
+            font-weight: 700; 
+            margin-bottom: 24px; 
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
 
-        .skill-card:hover h4,
-        .skill-card:active h4,
-        .skill-card:focus h4,
-        .skill-card.active-touch h4,
-        .accent-card:hover h3,
-        .accent-card:active h3,
-        .accent-card:focus h3,
-        .accent-card.active-touch h3,
-        .accent-card:hover h4,
-        .accent-card:active h4,
-        .accent-card:focus h4,
-        .accent-card.active-touch h4,
-        .accent-card:hover span,
-        .accent-card:active span,
-        .accent-card:focus span,
-        .accent-card.active-touch span {
-            color: rgb(152 218 75) !important;
-            text-shadow: 0 0 18px rgba(152,218,75,0.40);
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
         }
-        .skill-card:hover > p:first-of-type,
-        .skill-card:active > p:first-of-type,
-        .skill-card:focus > p:first-of-type,
-        .skill-card.active-touch > p:first-of-type,
-        .accent-card:hover > p:first-of-type,
-        .accent-card:active > p:first-of-type,
-        .accent-card:focus > p:first-of-type,
-        .accent-card.active-touch > p:first-of-type {
-            color: rgb(217 249 157) !important;
+        .contact-item {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: rgba(255,255,255,0.4);
+            padding: 12px; border-radius: 18px;
+            text-decoration: none; color: var(--text-primary);
+            font-size: 0.85rem; font-weight: 600;
+            transition: all 0.2s;
+            border: 1px solid transparent;
         }
-        .skill-card:hover > p:last-of-type,
-        .skill-card:active > p:last-of-type,
-        .skill-card:focus > p:last-of-type,
-        .skill-card.active-touch > p:last-of-type,
-        .accent-card:hover > p:last-of-type,
-        .accent-card:active > p:last-of-type,
-        .accent-card:focus > p:last-of-type,
-        .accent-card.active-touch > p:last-of-type {
-            color: rgb(236 252 217) !important;
-            opacity: 1 !important;
-            max-height: 6rem !important;
-            margin-top: 0.35rem;
+        .contact-item:hover { 
+            background: var(--accent-dim); 
+            border-color: var(--accent-border);
+            color: var(--text-primary);
+        }
+        .contact-icon { width: 18px; height: 18px; fill: currentColor; }
+
+        /* Section Titles */
+        h2 { 
+            font-size: 1.4rem; 
+            margin-bottom: 20px; 
+            font-weight: 700; 
+            letter-spacing: -0.3px; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::before {
+            content: ''; width: 4px; height: 24px; background: var(--accent); border-radius: 2px;
         }
 
-        #card .text-white { color: #ffffff !important; text-shadow: 0 2px 8px rgba(0,0,0,0.60) !important; }
-        #card .text-gray-200 { color: #f7fee7 !important; text-shadow: 0 1px 4px rgba(0,0,0,0.40) !important; }
-        #card .text-gray-300 { color: #ecfccb !important; }
-        #card .text-gray-400 { color: #d9f99d !important; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        #mob-scroll { scroll-behavior: smooth; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; overflow-x: hidden; }
+        /* Experience Timeline */
+        .timeline-item {
+            padding-left: 24px; border-left: 2px solid var(--glass-border);
+            margin-bottom: 28px; position: relative;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -6px; top: 6px;
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--accent); border: 2px solid var(--glass-bg);
+            box-shadow: 0 0 0 2px var(--accent-dim);
+        }
+        .timeline-date { font-size: 0.8rem; color: var(--accent); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .timeline-role { font-size: 1.1rem; font-weight: 600; margin-bottom: 2px; }
+        .timeline-company { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 8px; font-weight: 500; }
+        .timeline-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag {
+            background: var(--accent-dim); color: var(--text-primary);
+            padding: 8px 16px; border-radius: 20px;
+            font-size: 0.8rem; font-weight: 600;
+            border: 1px solid var(--accent-border);
+            transition: all 0.2s;
+        }
+        .skill-tag:hover { background: var(--accent); color: #000; }
+
+        /* Info Grid (Lingue/Patenti) */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .info-block h3 { font-size: 0.9rem; margin-bottom: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+        .info-list li { list-style: none; margin-bottom: 8px; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .info-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .info-list span:last-child { font-weight: 700; color: var(--text-primary); background: rgba(255,255,255,0.5); padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; }
+
+        /* Floating Nav */
+        .floating-nav {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            padding: 10px 20px; border-radius: 50px;
+            display: flex; gap: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.6); z-index: 100;
+        }
+        .nav-link {
+            text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.85rem;
+            transition: color 0.2s; position: relative;
+        }
+        .nav-link.active, .nav-link:hover { color: var(--text-primary); }
+        .nav-link.active::after {
+            content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+            width: 4px; height: 4px; border-radius: 50%; background: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.7rem; }
+            .floating-nav { width: 92%; justify-content: space-around; gap: 0; padding: 12px 10px; }
+            .glass-card { padding: 20px; }
+        }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-<div id="root" class="p-2 md:p-[5vh] overflow-hidden text-gray-200">
-
-    <input type="radio" name="cv-tab" id="r-profilo" class="hidden" checked>
-    <input type="radio" name="cv-tab" id="r-esperienza" class="hidden">
-    <input type="radio" name="cv-tab" id="r-competenze" class="hidden">
-    <input type="checkbox" id="r-menu" class="hidden">
-
-    <!-- Mobile overlay — placed at root level to properly cover screen -->
-    <div id="mobile-overlay" class="absolute inset-0 z-40 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 md:hidden"
-         style="background: rgba(0,0,0,0.75); backdrop-filter: blur(40px) saturate(180%); -webkit-backdrop-filter: blur(40px) saturate(180%);">
-        <label for="r-menu" class="overlay-close-btn absolute right-10 w-12 h-12 flex items-center justify-center rounded-2xl cursor-pointer text-white text-xl"
-               style="background: linear-gradient(145deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);">✕</label>
-        <div class="flex flex-col items-center space-y-6 text-center w-full px-10">
-            <button onclick="document.getElementById('r-menu').checked=false;document.getElementById('r-profilo').checked=true;document.getElementById('mob-scroll').scrollTo({top:document.getElementById('tab-profilo').offsetTop-20,behavior:'smooth'})" class="text-white text-3xl font-black uppercase tracking-[0.2em] hover:text-[#98DA4B] transition-colors w-full cursor-pointer">Profilo</button>
-            <button onclick="document.getElementById('r-menu').checked=false;document.getElementById('r-esperienza').checked=true;document.getElementById('mob-scroll').scrollTo({top:document.getElementById('tab-esperienza').offsetTop-20,behavior:'smooth'})" class="text-white text-3xl font-black uppercase tracking-[0.2em] hover:text-[#98DA4B] transition-colors w-full cursor-pointer">Esperienza</button>
-            <button onclick="document.getElementById('r-menu').checked=false;document.getElementById('r-competenze').checked=true;document.getElementById('mob-scroll').scrollTo({top:document.getElementById('tab-competenze').offsetTop-20,behavior:'smooth'})" class="text-white text-3xl font-black uppercase tracking-[0.2em] hover:text-[#98DA4B] transition-colors w-full cursor-pointer">Competenze</button>
-            <a href="mailto:b.komoni@gmail.com" class="text-[#98DA4B] text-3xl font-black uppercase tracking-[0.2em] hover:text-white transition-colors w-full">Contattami</a>
-        </div>
+    <!-- Animated Liquid Background -->
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
 
-    <div id="card" class="relative w-full h-full rounded-[2.5rem] md:rounded-[4.5rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] md:shadow-[0_0_80px_rgba(0,0,0,0.6),inset_0_1.5px_0_rgba(255,255,255,0.45),inset_0_0_3px_rgba(255,255,255,0.3)] border border-white/20 md:border-white/30 flex z-20 bg-black">
-
-        <div class="absolute inset-0 z-0 pointer-events-none">
-            <img src="img/home-landscape.jpeg" class="absolute inset-0 w-full h-full object-cover brightness-85 blur-sm img-landscape" alt="">
-            <img src="img/home.jpeg" class="absolute inset-0 w-full h-full object-cover brightness-85 blur-sm img-portrait" alt="">
-            <div class="absolute inset-0 bg-black/45 backdrop-blur-2xl md:backdrop-blur-none z-10"></div>
-        </div>
-
-        <div id="mob-scroll" class="relative z-10 w-full h-full flex flex-col md:flex-row overflow-x-hidden overflow-y-auto md:overflow-hidden no-scrollbar" style="-webkit-overflow-scrolling: touch;">
-
-            <!-- Sidebar — responsive panels -->
-            <div class="w-full md:w-1/3 flex flex-col items-center text-center border-b md:border-b-0 md:border-r shrink-0 md:h-full md:overflow-y-auto md:no-scrollbar z-20 sidebar-panel">
-
-                <div id="mob-header" class="sticky top-0 z-40 w-full flex flex-col items-center p-8 md:p-0 md:pt-12 transition-all duration-300">
-                    <!-- Hamburger — respects notch via ham-btn class, placed inside header -->
-                    <label for="r-menu" class="ham-btn absolute right-6 md:hidden z-50 w-12 h-12 flex flex-col justify-center items-center gap-1.5 rounded-2xl cursor-pointer"
-                           style="background: linear-gradient(145deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3)); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.15); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 6px 20px rgba(0,0,0,0.4);">
-                        <span class="ham-line-1 block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
-                        <span class="ham-line-2 block w-6 h-[2px] bg-white transition-all duration-300"></span>
-                        <span class="ham-line-3 block w-6 h-[2px] bg-white transition-all duration-300 origin-center"></span>
-                    </label>
-                    <div id="mob-logo" class="w-32 h-32 md:w-48 md:h-48 mb-4 md:mb-6 rounded-full overflow-hidden shrink-0 transition-all duration-300"
-                         style="border: 2px solid rgba(255,255,255,0.30); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 12px 40px rgba(0,0,0,0.50), 0 0 0 4px rgba(255,255,255,0.05);">
-                        <img src="img/profilo.jpg" class="w-full h-full object-cover" alt="Buiar Komoni">
-                    </div>
-                    <div class="flex flex-col items-center text-center">
-                        <h1 id="mob-name" class="text-3xl md:text-5xl font-black tracking-tighter leading-none text-white drop-shadow-lg transition-all duration-300" style="font-variant: small-caps;">Buiar Komoni</h1>
-                        <div class="w-full max-w-[280px] h-[2px] my-4" style="background: linear-gradient(90deg, transparent 0%, rgba(152,218,75,0.4) 30%, rgba(152,218,75,0.7) 50%, rgba(152,218,75,0.4) 70%, transparent 100%);"></div>
-                        <p id="mob-title" class="text-[#98DA4B] font-semibold tracking-[0.15em] text-xs md:text-sm drop-shadow-md transition-all duration-300">Informatico di Gestione</p>
-                    </div>
+    <div class="container">
+        <!-- Profile Header -->
+        <header class="glass-card profile-header">
+            <img src="img/profilo_compressed.jpg" alt="Buiar Komoni" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Buiar+Komoni&background=84cc16&color=000&size=256'">
+            <h1>Buiar Komoni</h1>
+            <p class="subtitle">Informatico di Gestione</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:b.komoni@gmail.com" class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Email
+                </a>
+                <a href="tel:+41763846969" class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Chiama
+                </a>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Ticino, CH
                 </div>
-
-                <div class="space-y-4 mt-6 w-fit mx-auto">
-                    <div class="flex items-center gap-4 text-gray-200">
-                        <svg class="w-5 h-5 text-[#8BC34A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        <a href="mailto:b.komoni@gmail.com" class="text-sm hover:text-white transition-colors">b.komoni@gmail.com</a>
-                    </div>
-                    <div class="flex items-center gap-4 text-gray-200">
-                        <svg class="w-5 h-5 text-[#8BC34A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        <a href="tel:+41763846969" class="text-sm hover:text-white transition-colors">+41 76 384 69 69</a>
-                    </div>
-                    <div class="flex items-center gap-4 text-gray-200">
-                        <svg class="w-5 h-5 text-[#8BC34A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        <span class="text-sm">Ticino, Svizzera</span>
-                    </div>
-                    <div class="flex items-center gap-4 text-gray-200">
-                        <svg class="w-5 h-5 text-[#8BC34A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        <span class="text-sm">15/06/1984</span>
-                    </div>
-                </div>
-
-                <div id="mob-socials" class="flex justify-center gap-6 pb-6 pt-10 transition-opacity duration-300">
-                    <a href="https://linkedin.com/in/buiar-komoni" target="_blank" rel="noopener" class="text-white/40 hover:text-[#98DA4B] hover:scale-110 transition-all duration-300">
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://wa.me/41763846969" target="_blank" rel="noopener" class="text-white/40 hover:text-[#98DA4B] hover:scale-110 transition-all duration-300">
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.013 2.016c-5.503 0-9.972 4.469-9.972 9.973 0 1.761.458 3.486 1.328 5.006l-1.353 4.954 5.077-1.332c1.472.809 3.151 1.238 4.908 1.238 5.504 0 9.973-4.469 9.973-9.973 0-5.504-4.469-9.973-9.973-9.973zm0 18.232c-1.488 0-2.94-.397-4.215-1.148l-.302-.179-3.13.821.835-3.05-.196-.313c-.825-1.31-1.261-2.825-1.261-4.405 0-4.57 3.719-8.289 8.281-8.289 4.561 0 8.281 3.719 8.281 8.289 0 4.569-3.72 8.289-8.281 8.281zm4.561-6.223c-.25-.125-1.478-.729-1.708-.813-.229-.083-.396-.125-.563.125-.167.25-.646.813-.792.979-.146.167-.292.188-.542.063-.25-.125-1.054-.388-2.008-1.238-.742-.662-1.242-1.479-1.388-1.729-.146-.25-.016-.385.109-.509.113-.112.25-.292.375-.438.125-.146.167-.25.25-.417.083-.167.042-.313-.021-.438-.063-.125-.563-1.354-.771-1.854-.203-.49-.41-.424-.563-.431-.146-.007-.313-.007-.479-.007s-.438.063-.667.313c-.229.25-.875.854-.875 2.083 0 1.229.896 2.417 1.021 2.583.125.167 1.761 2.688 4.267 3.771.597.258 1.063.412 1.425.528.599.191 1.144.164 1.573.1.478-.072 1.478-.604 1.686-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z"/></svg>
-                    </a>
-                    <a href="https://gitlab.com/buiar.komoni" target="_blank" rel="noopener" class="text-white/40 hover:text-[#98DA4B] hover:scale-110 transition-all duration-300">
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 01-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 014.82 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0118.6 2a.43.43 0 01.58 0 .42.42 0 01.11.18l2.44 7.51L23 13.45a.84.84 0 01-.35.94z"/></svg>
-                    </a>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                    15/06/1984
                 </div>
             </div>
+        </header>
 
-            <!-- Main content -->
-            <div class="flex-1 flex flex-col md:h-full content-panel">
-                <div class="hidden md:flex p-8 pb-0 gap-4 z-20">
-                    <label for="r-profilo" class="tab-lbl tab-lbl-profilo accent-card cursor-pointer px-6 py-3 rounded-2xl text-xs font-bold uppercase tracking-widest border transition-all">Profilo</label>
-                    <label for="r-esperienza" class="tab-lbl tab-lbl-esperienza accent-card cursor-pointer px-6 py-3 rounded-2xl text-xs font-bold uppercase tracking-widest border transition-all">Esperienza & Studi</label>
-                    <label for="r-competenze" class="tab-lbl tab-lbl-competenze accent-card cursor-pointer px-6 py-3 rounded-2xl text-xs font-bold uppercase tracking-widest border transition-all">Competenze</label>
-                </div>
+        <!-- Profilo -->
+        <section id="profilo" class="glass-card">
+            <h2>Profilo Personale</h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+                Professionista affidabile e orientato alle persone, con esperienza commerciale e logistica, oggi focalizzato sulla riqualifica come Informatico di Gestione presso la SIG di Bellinzona. Mi muovo bene tra relazioni, organizzazione e problem solving. La passione per la tecnologia mi ha portato verso l'informatica da sempre, con approccio pratico e voglia di imparare velocemente.
+            </p>
+        </section>
 
-                <div class="flex-1 md:overflow-y-auto no-scrollbar p-8 md:p-12">
-                    <div id="tab-profilo" class="animate-fade-in space-y-8">
-                        <h2 class="text-3xl font-black tracking-wider text-white border-b border-white/10 pb-4" style="font-variant: small-caps;">Profilo Personale</h2>
-                        <p class="text-gray-200 text-lg font-medium leading-relaxed">Professionista affidabile e orientato alle persone, con esperienza commerciale e logistica, oggi focalizzato sulla riqualifica come <strong>Informatico di Gestione</strong> presso la SIG di Bellinzona.</p>
-                        <p class="text-gray-400 leading-relaxed">Mi muovo bene tra relazioni, organizzazione e problem solving. La passione per la tecnologia mi ha portato verso l'informatica da sempre, con approccio pratico e voglia di imparare velocemente.</p>
-                    </div>
-
-                    <div id="tab-esperienza" class="animate-fade-in space-y-12 mt-16 pt-16 border-t border-white/10 md:mt-0 md:pt-0 md:border-0">
-                        <div>
-                            <h2 class="text-3xl font-black tracking-wider text-white border-b border-white/10 pb-4 mb-8" style="font-variant: small-caps;">Esperienza Lavorativa</h2>
-                            <div class="relative border-l-2 border-white/20 ml-3 space-y-10 pb-4">
-                                <div class="accent-card relative pl-8 p-4 rounded-3xl">
-                                    <div class="absolute w-4 h-4 bg-[#8BC34A] rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(139,195,74,0.8)]"></div>
-                                    <span class="text-xs font-bold text-[#98DA4B] uppercase tracking-widest">2015 – 2023</span>
-                                    <h3 class="text-xl font-bold text-white mt-1">Consulente Vendita</h3>
-                                    <p class="text-sm text-gray-400 font-medium mb-1">Komoni Auto — Cadempino</p>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Consulente alla vendita di autoveicoli.</p>
-                                </div>
-                                <div class="accent-card relative pl-8 p-4 rounded-3xl">
-                                    <div class="absolute w-4 h-4 bg-white/30 rounded-full border-2 border-white/50 -left-[9px] top-1"></div>
-                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">2008 – 2009</span>
-                                    <h3 class="text-lg font-bold text-white mt-1">Impiegato di Commercio / Logistica</h3>
-                                    <p class="text-sm text-gray-400 font-medium mb-1">Indi Logistic SA — Quartino</p>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Gestione e consegna merce, aiuto contabilità.</p>
-                                </div>
-                                <div class="accent-card relative pl-8 p-4 rounded-3xl">
-                                    <div class="absolute w-4 h-4 bg-white/30 rounded-full border-2 border-white/50 -left-[9px] top-1"></div>
-                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">2007 – 2008</span>
-                                    <h3 class="text-lg font-bold text-white mt-1">Consulente alla Vendita — Sales Agent Swisscom</h3>
-                                    <p class="text-sm text-gray-400 font-medium mb-1">Adecco SA — Lugano</p>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Consulente alla clientela per prodotti di telecomunicazione Swisscom.</p>
-                                </div>
-                                <div class="accent-card relative pl-8 p-4 rounded-3xl">
-                                    <div class="absolute w-4 h-4 bg-white/30 rounded-full border-2 border-white/50 -left-[9px] top-1"></div>
-                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">2004 – 2005</span>
-                                    <h3 class="text-lg font-bold text-white mt-1">Apprendista Impiegato di Commercio</h3>
-                                    <p class="text-sm text-gray-400 font-medium mb-1">Aircond SA — Cureglia</p>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Gestione ore collaboratori e stipendi, corrispondenza, cassa, compilazione capitolati, registrazione fatture, aiuto contabilità, gestione archivio.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class="text-3xl font-black tracking-wider text-white border-b border-white/10 pb-4 mb-8" style="font-variant: small-caps;">Studi e Formazione</h2>
-                            <div class="relative border-l-2 border-white/20 ml-3 space-y-10 pb-4">
-                                <div class="accent-card relative pl-8 p-4 rounded-3xl">
-                                    <div class="absolute w-4 h-4 bg-[#8BC34A] rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(139,195,74,0.8)]"></div>
-                                    <span class="text-xs font-bold text-[#98DA4B] uppercase tracking-widest">2023 – Attuale</span>
-                                    <h3 class="text-xl font-bold text-white mt-1">Informatico di Gestione (SSS)</h3>
-                                    <p class="text-sm text-gray-400 font-medium mb-1">SIG — Bellinzona (Formazione serale)</p>
-                                    <p class="text-xs text-gray-500 leading-relaxed">Diploma SSS in informatica di gestione.</p>
-                                </div>
-                                <div class="accent-card relative pl-8 p-4 rounded-3xl">
-                                    <div class="absolute w-4 h-4 bg-white/30 rounded-full border-2 border-white/50 -left-[9px] top-1"></div>
-                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">2005</span>
-                                    <h3 class="text-lg font-bold text-white mt-1">Impiegato di Commercio (AFC)</h3>
-                                    <p class="text-sm text-gray-400 font-medium">Centro Professionale Commerciale — Lugano</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="tab-competenze" class="animate-fade-in space-y-12 mt-16 pt-16 border-t border-white/10 md:mt-0 md:pt-0 md:border-0">
-                        <section>
-                            <h2 class="text-3xl font-black tracking-wider text-white border-b border-white/10 pb-4 mb-6" style="font-variant: small-caps;">Digital Skills</h2>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">AMOL</h4><p class="text-xs text-gray-400">Ambienti operativi - GNU/Linux</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-300">Linux: installazione, configurazione, sicurezza e troubleshooting.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">APGB</h4><p class="text-xs text-gray-400">Applicazioni gestionali e burotica avanzata</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Excel, Access, automazione e preparazione dati per management.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">BUDG</h4><p class="text-xs text-gray-400">Budgeting e Business Plan</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Budget, master budget e analisi degli scostamenti.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">CARC</h4><p class="text-xs text-gray-400">Componenti architetturali</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Architetture web, client-side e soluzioni moderne.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">CINV</h4><p class="text-xs text-gray-400">Calcoli di investimento</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Investimenti, grandezze chiave e fattibilità economica/finanziaria.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">COAN</h4><p class="text-xs text-gray-400">Contabilità analitica e analisi CVP</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Contabilità analitica, CVP e tecniche di calcolo.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">COMA</h4><p class="text-xs text-gray-400">Concezione e metodologia - Corso avanzato</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Analisi software, requisiti e UML.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">HRLG</h4><p class="text-xs text-gray-400">Risorse umane e logistica</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Pianificazione del personale e reclutamento.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">INAD</h4><p class="text-xs text-gray-400">Ingegneria e amministrazione dei dati</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">T-SQL, oggetti DB e programmazione concettuale.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">INGA</h4><p class="text-xs text-gray-400">Inglese - Corso avanzato</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-300">Inglese avanzato per lettura e comunicazione tecnica.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">INSA</h4><p class="text-xs text-gray-400">Integrazione sistemi e framework - avanzato</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-300">VS Code, OOP e applicazioni MVC.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">INSB</h4><p class="text-xs text-gray-400">Integrazione sistemi e framework - base</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-300">Visual Studio, OOP e applicazioni MVC.</p>
-                                </div>
-
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">MARK</h4><p class="text-xs text-gray-400">Marketing</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Marketing digitale, dispense e casi pratici.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">NSAA</h4><p class="text-xs text-gray-400">Networking e sicurezza aziendale - Corso</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">HTTP, SSL, VLAN, STP e ridondanza di rete.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">ORGM</h4><p class="text-xs text-gray-400">Organizzazione e management strategico</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-300">Organizzazione, coordinamento e strategia.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">PRGA</h4><p class="text-xs text-gray-400">Progetto informatico - avanzato</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Progetto complesso, rischi e Scrum.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">PRJM</h4><p class="text-xs text-gray-400">Project Management</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Project management, rischi e qualità.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">QUAS</h4><p class="text-xs text-gray-400">Qualità, Ambiente, Sicurezza</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Miglioramento continuo e norme ISO.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">RIOP</h4><p class="text-xs text-gray-400">Ricerca operativa</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">Algoritmi, complessità e grafi.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">SIIN</h4><p class="text-xs text-gray-400">Sistemi informativi integrati</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">ERP, sistema informativo e valore strategico.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">SMOB</h4><p class="text-xs text-gray-400">Sviluppo di applicazioni mobile</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">React Native, UI e componenti riutilizzabili.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">STGO</h4><p class="text-xs text-gray-400">Strategie e Governance ICT</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">BIA, FMEA, SWOT, SLA e ITIL.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">STOS</h4><p class="text-xs text-gray-400">Strumenti open source</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">PHP, pagine web e classi.</p>
-                                </div>
-                                <div class="skill-card accent-card group p-4 rounded-3xl transition-all">
-                                    <h4 class="text-white font-bold text-sm">STPR</h4><p class="text-xs text-gray-400">Strumenti proprietari</p>
-                                    <p class="text-[10px] text-gray-300 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-24 transition-all duration-300">OOP, reports e app desktop.</p>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <h2 class="text-3xl font-black tracking-wider text-white border-b border-white/10 pb-4 mb-6" style="font-variant: small-caps;">Lingue</h2>
-                            <div class="space-y-4">
-                                <div class="accent-card flex items-center justify-between px-5 py-3 rounded-2xl">
-                                    <span class="text-white font-semibold">Italiano</span>
-                                    <span class="text-xs text-[#98DA4B] font-bold uppercase tracking-widest">Madrelingua</span>
-                                </div>
-                                <div class="accent-card flex items-center justify-between px-5 py-3 rounded-2xl">
-                                    <span class="text-white font-semibold">Albanese</span>
-                                    <span class="text-xs text-[#98DA4B] font-bold uppercase tracking-widest">Madrelingua</span>
-                                </div>
-                                <div class="accent-card px-5 py-3 rounded-2xl">
-                                    <div class="flex items-center justify-between mb-2">
-                                        <span class="text-white font-semibold">Inglese</span>
-                                        <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">B1 Ascolto / Lettura</span>
-                                    </div>
-                                    <div class="flex flex-wrap gap-2 text-[10px] text-gray-500 uppercase tracking-widest">
-                                        <span>Scrittura A2</span><span>·</span><span>Produzione Orale A2</span><span>·</span><span>Interazione A2</span>
-                                    </div>
-                                </div>
-                                <div class="accent-card px-5 py-3 rounded-2xl">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-white font-semibold">Tedesco</span>
-                                        <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">A1</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <h2 class="text-3xl font-black tracking-wider text-white border-b border-white/10 pb-4 mb-6" style="font-variant: small-caps;">Patenti di Guida</h2>
-                            <div class="flex flex-wrap gap-3">
-                                <span class="accent-card px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-white">Automobile (B, BE)</span>
-                                <span class="accent-card px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-gray-200">Motocicletta (A1)</span>
-                                <span class="accent-card px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-gray-200">Altro (D1, D1E)</span>
-                            </div>
-                        </section>
-                    </div>
-                </div>
+        <!-- Esperienza & Studi -->
+        <section id="esperienza" class="glass-card">
+            <h2>Esperienza & Formazione</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2023 – Attuale</div>
+                <div class="timeline-role">Informatico di Gestione (SSS)</div>
+                <div class="timeline-company">SIG — Bellinzona</div>
+                <div class="timeline-desc">Diploma SSS in informatica di gestione (Formazione serale).</div>
             </div>
-        </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2015 – 2023</div>
+                <div class="timeline-role">Consulente Vendita</div>
+                <div class="timeline-company">Komoni Auto — Cadempino</div>
+                <div class="timeline-desc">Consulente alla vendita di autoveicoli.</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2008 – 2009</div>
+                <div class="timeline-role">Impiegato di Commercio / Logistica</div>
+                <div class="timeline-company">Indi Logistic SA — Quartino</div>
+                <div class="timeline-desc">Gestione e consegna merce, aiuto contabilità.</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2007 – 2008</div>
+                <div class="timeline-role">Sales Agent Swisscom</div>
+                <div class="timeline-company">Adecco SA — Lugano</div>
+                <div class="timeline-desc">Consulente alla clientela per prodotti di telecomunicazione.</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2004 – 2005</div>
+                <div class="timeline-role">Apprendista Impiegato di Commercio</div>
+                <div class="timeline-company">Aircond SA — Cureglia</div>
+                <div class="timeline-desc">Gestione ore collaboratori, stipendi, corrispondenza e contabilità.</div>
+            </div>
+        </section>
+
+        <!-- Competenze Digitali -->
+        <section id="competenze" class="glass-card">
+            <h2>Digital Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">GNU/Linux</span>
+                <span class="skill-tag">Excel / Access</span>
+                <span class="skill-tag">Budgeting</span>
+                <span class="skill-tag">Architetture Web</span>
+                <span class="skill-tag">UML</span>
+                <span class="skill-tag">T-SQL / DB</span>
+                <span class="skill-tag">OOP / MVC</span>
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">Networking</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">ERP Systems</span>
+                <span class="skill-tag">ITIL / SWOT</span>
+            </div>
+        </section>
+
+        <!-- Lingue & Patenti -->
+        <section class="glass-card info-grid">
+            <div class="info-block">
+                <h3>Lingue</h3>
+                <ul class="info-list">
+                    <li><span>Italiano</span> <span>Madrelingua</span></li>
+                    <li><span>Albanese</span> <span>Madrelingua</span></li>
+                    <li><span>Inglese</span> <span>B1/B2</span></li>
+                    <li><span>Tedesco</span> <span>A1</span></li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3>Patenti</h3>
+                <ul class="info-list">
+                    <li><span>Auto</span> <span>B, BE</span></li>
+                    <li><span>Moto</span> <span>A1</span></li>
+                    <li><span>Altro</span> <span>D1, D1E</span></li>
+                </ul>
+            </div>
+        </section>
     </div>
-</div>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-    * { font-family: 'Space Grotesk', sans-serif; }
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <a href="#profilo" class="nav-link active">Profilo</a>
+        <a href="#esperienza" class="nav-link">Esperienza</a>
+        <a href="#competenze" class="nav-link">Skills</a>
+        <a href="mailto:b.komoni@gmail.com" class="nav-link" style="color: var(--accent);">Contattami</a>
+    </nav>
 
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-    @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .animate-fade-in { animation: fade-in 0.4s ease-out forwards; }
-
-    .img-landscape { opacity: 1; }
-    .img-portrait  { opacity: 0; }
-    @media (max-width: 767px) {
-        .img-landscape { opacity: 0; }
-        .img-portrait  { opacity: 1; }
-    }
-
-    /* ── Tab labels — liquid glass ── */
-    .tab-lbl {
-        color: rgba(255,255,255,0.55);
-        background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
-        border-color: rgba(255,255,255,0.18);
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 4px 12px rgba(0,0,0,0.20);
-        backdrop-filter: blur(16px) saturate(160%);
-        -webkit-backdrop-filter: blur(16px) saturate(160%);
-    }
-    .tab-lbl:hover {
-        color: rgb(152 218 75);
-        border-color: rgba(152,218,75,0.40);
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 4px 16px rgba(152,218,75,0.15);
-    }
-
-    @media (min-width: 768px) {
-        #tab-profilo, #tab-esperienza, #tab-competenze { display: none; }
-        #root:has(#r-profilo:checked)    #tab-profilo    { display: block; }
-        #root:has(#r-esperienza:checked) #tab-esperienza { display: block; }
-        #root:has(#r-competenze:checked) #tab-competenze { display: block; }
-
-        #root:has(#r-profilo:checked)    .tab-lbl-profilo,
-        #root:has(#r-esperienza:checked) .tab-lbl-esperienza,
-        #root:has(#r-competenze:checked) .tab-lbl-competenze {
-            color: white;
-            background: linear-gradient(145deg, rgba(255,255,255,0.25), rgba(255,255,255,0.10));
-            border-color: rgba(255,255,255,0.55);
-            box-shadow:
-                inset 0 1.5px 0 rgba(255,255,255,0.60),
-                0 0 20px rgba(255,255,255,0.15),
-                0 6px 20px rgba(0,0,0,0.25);
-        }
-    }
-
-    #root:has(#r-menu:checked) .ham-line-1 { transform: translateY(8px) rotate(45deg); }
-    #root:has(#r-menu:checked) .ham-line-2 { opacity: 0; }
-    #root:has(#r-menu:checked) .ham-line-3 { transform: translateY(-8px) rotate(-45deg); }
-
-    #root:has(#r-menu:checked) #mobile-overlay {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    @media (max-width: 767px) {
-        #mob-sticky-socials.visible {
-            opacity: 1 !important;
-            transform: translateY(-50%) scale(1) !important;
-            pointer-events: auto !important;
-        }
-    }
-
-    @keyframes bgExitCW {
-        from { transform: rotate(0deg)   scale(1);    opacity: 1; }
-        to   { transform: rotate(90deg)  scale(0.8);  opacity: 0; }
-    }
-    @keyframes bgExitCCW {
-        from { transform: rotate(0deg)   scale(1);    opacity: 1; }
-        to   { transform: rotate(-90deg) scale(0.8);  opacity: 0; }
-    }
-    @keyframes bgEnter {
-        from { transform: rotate(10deg)  scale(0.9);  opacity: 0; }
-        to   { transform: rotate(0deg)   scale(1);    opacity: 1; }
-    }
-    .bg-exit-cw  { animation: bgExitCW  0.55s ease-in-out forwards !important; }
-    .bg-exit-ccw { animation: bgExitCCW 0.55s ease-in-out forwards !important; }
-    .bg-enter    { animation: bgEnter   0.55s ease-in-out forwards !important; }
-</style>
-
-<script>
-(function () {
-    const scroll  = document.getElementById('mob-scroll');
-    const header  = document.getElementById('mob-header');
-    const title   = document.getElementById('mob-title');
-    if (!scroll || !header) return;
-
-    function onScroll() {
-        if (window.innerWidth >= 768) return;
-        const s = scroll.scrollTop;
-
-        if (s > 60) {
-            header.classList.add('scrolled');
-            if (title) title.style.display = 'none';
-        } else {
-            header.classList.remove('scrolled');
-            if (title) title.style.display = '';
-        }
-    }
-
-    scroll.addEventListener('scroll', onScroll, { passive: true });
-})();
-
-
-
-(function () {
-    const cards = document.querySelectorAll('.skill-card, .accent-card');
-    cards.forEach(el => {
-        el.setAttribute('tabindex', '0');
-        
-        el.addEventListener('click', (e) => {
-            if (window.innerWidth < 768) {
-                e.stopPropagation();
-                const wasActive = el.classList.contains('active-touch');
-                cards.forEach(c => c.classList.remove('active-touch'));
-                if (!wasActive) {
-                    el.classList.add('active-touch');
-                }
-            }
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
         });
-    });
 
-    document.addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-            cards.forEach(c => c.classList.remove('active-touch'));
-        }
-    });
-})();
-</script>
-
+        // Active state on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) current = section.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
+
