@@ -9,7 +9,6 @@
         :root {
             --accent: #84cc16;
             --accent-glow: rgba(132, 204, 22, 0.6);
-            /* Ombra più intensa */
             --glass-bg: rgba(255, 255, 255, 0.75);
             --glass-border: rgba(255, 255, 255, 0.6);
             --text-primary: #1d1d1f;
@@ -47,6 +46,8 @@
             min-height: 100vh;
             overflow-x: hidden;
             line-height: 1.5;
+            /* Previene lo zoom al doppio tap su iOS */
+            touch-action: manipulation;
         }
 
         .liquid-bg {
@@ -150,7 +151,7 @@
             transform: scale(1.1);
         }
 
-        /* CARD BASE CON OMBRA HOVER */
+        /* CARD BASE CON OMBRA HOVER E TOUCH */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(var(--blur-strength)) saturate(180%);
@@ -163,9 +164,11 @@
             transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
         }
 
-        /* EFFETTO HOVER UNIFICATO PER TUTTE LE CARD */
+        /* EFFETTO HOVER DESKTOP + CLASSE ACTIVE-TOUCH PER MOBILE */
         .glass-card:hover,
-        .skill-module:hover {
+        .skill-module:hover,
+        .glass-card.active-touch,
+        .skill-module.active-touch {
             transform: translateY(-4px);
             box-shadow: var(--hover-shadow);
             border-color: var(--accent);
@@ -230,7 +233,8 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
-        .contact-item:hover {
+        .contact-item:hover,
+        .contact-item.active-touch {
             background: rgba(132, 204, 22, 0.1);
             border-color: rgba(132, 204, 22, 0.3);
         }
@@ -306,6 +310,7 @@
             color: var(--text-secondary);
         }
 
+        /* GRIGLIA SKILLS QUADRATA */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -319,6 +324,9 @@
             padding: 18px;
             transition: all 0.3s ease;
             cursor: default;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         [data-theme="dark"] .skill-module {
@@ -462,32 +470,8 @@
             }
 
             .skills-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
                 gap: 12px;
-            }
-
-            .skill-module {
-                padding: 16px;
-                display: flex;
-                align-items: center;
-                gap: 16px;
-            }
-
-            .skill-code {
-                margin-bottom: 0;
-                min-width: 50px;
-                text-align: center;
-                background: rgba(132, 204, 22, 0.1);
-                padding: 6px 0;
-                border-radius: 10px;
-            }
-
-            .skill-content {
-                flex: 1;
-            }
-
-            .skill-name {
-                margin-bottom: 2px;
             }
 
             .theme-toggle {
@@ -562,7 +546,6 @@
             </div>
         </header>
 
-        <!-- PROFILO AGGIORNATO: A CAPO SOLO DOPO BELLINZONA -->
         <section id="profilo" class="glass-card">
             <h2>Profilo Personale</h2>
             <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
@@ -607,178 +590,128 @@
             </div>
         </section>
 
-        <!-- TITOLO CAMBIATO IN DIGITAL SKILLS (SIG) -->
         <section id="competenze" class="glass-card">
             <h2>Digital Skills (SIG)</h2>
             <div class="skills-grid">
                 <div class="skill-module">
                     <div class="skill-code">AMOL</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Ambienti operativi</div>
-                        <div class="skill-desc">GNU/Linux: installazione, configurazione, sicurezza e troubleshooting.
-                        </div>
-                    </div>
+                    <div class="skill-name">Ambienti operativi</div>
+                    <div class="skill-desc">GNU/Linux: installazione, configurazione, sicurezza e troubleshooting.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">APGB</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Applicazioni gestionali</div>
-                        <div class="skill-desc">Excel, Access, automazione e preparazione dati per management.</div>
-                    </div>
+                    <div class="skill-name">Applicazioni gestionali</div>
+                    <div class="skill-desc">Excel, Access, automazione e preparazione dati per management.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">BUDG</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Budgeting</div>
-                        <div class="skill-desc">Budget, master budget e analisi degli scostamenti.</div>
-                    </div>
+                    <div class="skill-name">Budgeting</div>
+                    <div class="skill-desc">Budget, master budget e analisi degli scostamenti.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">CARC</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Componenti architetturali</div>
-                        <div class="skill-desc">Architetture web, client-side e soluzioni moderne.</div>
-                    </div>
+                    <div class="skill-name">Componenti architetturali</div>
+                    <div class="skill-desc">Architetture web, client-side e soluzioni moderne.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">CINV</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Calcoli di investimento</div>
-                        <div class="skill-desc">Investimenti, grandezze chiave e fattibilità economica.</div>
-                    </div>
+                    <div class="skill-name">Calcoli di investimento</div>
+                    <div class="skill-desc">Investimenti, grandezze chiave e fattibilità economica.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">COAN</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Contabilità analitica</div>
-                        <div class="skill-desc">Contabilità analitica, CVP e tecniche di calcolo.</div>
-                    </div>
+                    <div class="skill-name">Contabilità analitica</div>
+                    <div class="skill-desc">Contabilità analitica, CVP e tecniche di calcolo.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">COMA</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Concezione avanzata</div>
-                        <div class="skill-desc">Analisi software, requisiti e UML.</div>
-                    </div>
+                    <div class="skill-name">Concezione avanzata</div>
+                    <div class="skill-desc">Analisi software, requisiti e UML.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">HRLG</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Risorse umane</div>
-                        <div class="skill-desc">Pianificazione del personale e reclutamento.</div>
-                    </div>
+                    <div class="skill-name">Risorse umane</div>
+                    <div class="skill-desc">Pianificazione del personale e reclutamento.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">INAD</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Ingegneria dati</div>
-                        <div class="skill-desc">T-SQL, oggetti DB e programmazione concettuale.</div>
-                    </div>
+                    <div class="skill-name">Ingegneria dati</div>
+                    <div class="skill-desc">T-SQL, oggetti DB e programmazione concettuale.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">INGA</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Inglese avanzato</div>
-                        <div class="skill-desc">Inglese tecnico per lettura e comunicazione.</div>
-                    </div>
+                    <div class="skill-name">Inglese avanzato</div>
+                    <div class="skill-desc">Inglese tecnico per lettura e comunicazione.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">INSA</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Integrazione avanzata</div>
-                        <div class="skill-desc">VS Code, OOP e applicazioni MVC.</div>
-                    </div>
+                    <div class="skill-name">Integrazione avanzata</div>
+                    <div class="skill-desc">VS Code, OOP e applicazioni MVC.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">INSB</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Integrazione base</div>
-                        <div class="skill-desc">Visual Studio, OOP e applicazioni MVC.</div>
-                    </div>
+                    <div class="skill-name">Integrazione base</div>
+                    <div class="skill-desc">Visual Studio, OOP e applicazioni MVC.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">MARK</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Marketing</div>
-                        <div class="skill-desc">Marketing digitale, dispense e casi pratici.</div>
-                    </div>
+                    <div class="skill-name">Marketing</div>
+                    <div class="skill-desc">Marketing digitale, dispense e casi pratici.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">NSAA</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Networking & Sicurezza</div>
-                        <div class="skill-desc">HTTP, SSL, VLAN, STP e ridondanza di rete.</div>
-                    </div>
+                    <div class="skill-name">Networking & Sicurezza</div>
+                    <div class="skill-desc">HTTP, SSL, VLAN, STP e ridondanza di rete.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">ORGM</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Organizzazione strategica</div>
-                        <div class="skill-desc">Organizzazione, coordinamento e strategia aziendale.</div>
-                    </div>
+                    <div class="skill-name">Organizzazione strategica</div>
+                    <div class="skill-desc">Organizzazione, coordinamento e strategia aziendale.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">PRGA</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Progetto avanzato</div>
-                        <div class="skill-desc">Progetto complesso, rischi e Scrum.</div>
-                    </div>
+                    <div class="skill-name">Progetto avanzato</div>
+                    <div class="skill-desc">Progetto complesso, rischi e Scrum.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">PRJM</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Project Management</div>
-                        <div class="skill-desc">Project management, rischi e qualità.</div>
-                    </div>
+                    <div class="skill-name">Project Management</div>
+                    <div class="skill-desc">Project management, rischi e qualità.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">QUAS</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Qualità & Sicurezza</div>
-                        <div class="skill-desc">Miglioramento continuo e norme ISO.</div>
-                    </div>
+                    <div class="skill-name">Qualità & Sicurezza</div>
+                    <div class="skill-desc">Miglioramento continuo e norme ISO.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">RIOP</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Ricerca operativa</div>
-                        <div class="skill-desc">Algoritmi, complessità e grafi.</div>
-                    </div>
+                    <div class="skill-name">Ricerca operativa</div>
+                    <div class="skill-desc">Algoritmi, complessità e grafi.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">SIIN</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Sistemi integrati</div>
-                        <div class="skill-desc">ERP, sistema informativo e valore strategico.</div>
-                    </div>
+                    <div class="skill-name">Sistemi integrati</div>
+                    <div class="skill-desc">ERP, sistema informativo e valore strategico.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">SMOB</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Sviluppo Mobile</div>
-                        <div class="skill-desc">React Native, UI e componenti riutilizzabili.</div>
-                    </div>
+                    <div class="skill-name">Sviluppo Mobile</div>
+                    <div class="skill-desc">React Native, UI e componenti riutilizzabili.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">STGO</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Governance ICT</div>
-                        <div class="skill-desc">BIA, FMEA, SWOT, SLA e ITIL.</div>
-                    </div>
+                    <div class="skill-name">Governance ICT</div>
+                    <div class="skill-desc">BIA, FMEA, SWOT, SLA e ITIL.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">STOS</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Open Source</div>
-                        <div class="skill-desc">PHP, pagine web e classi.</div>
-                    </div>
+                    <div class="skill-name">Open Source</div>
+                    <div class="skill-desc">PHP, pagine web e classi.</div>
                 </div>
                 <div class="skill-module">
                     <div class="skill-code">STPR</div>
-                    <div class="skill-content">
-                        <div class="skill-name">Strumenti proprietari</div>
-                        <div class="skill-desc">OOP, reports e app desktop.</div>
-                    </div>
+                    <div class="skill-name">Strumenti proprietari</div>
+                    <div class="skill-desc">OOP, reports e app desktop.</div>
                 </div>
             </div>
         </section>
@@ -812,12 +745,15 @@
     </nav>
 
     <script>
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Active state on scroll
         window.addEventListener('scroll', () => {
             let current = '';
             document.querySelectorAll('section').forEach(section => {
@@ -829,6 +765,7 @@
             });
         });
 
+        // Theme Toggle Logic
         const themeToggle = document.getElementById('themeToggle');
         const moonIcon = document.getElementById('moonIcon');
         const sunIcon = document.getElementById('sunIcon');
@@ -856,6 +793,26 @@
                 sunIcon.style.display = 'block';
             }
         });
+
+        // --- LOGICA TOUCH PER IOS/MOBILE ---
+        // Rileva il tocco sulle card e mantiene l'effetto hover attivo
+        const interactiveElements = document.querySelectorAll('.glass-card, .skill-module, .contact-item');
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('touchstart', function (e) {
+                // Rimuovi la classe da tutti gli altri elementi
+                interactiveElements.forEach(item => item.classList.remove('active-touch'));
+                // Aggiungi la classe all'elemento toccato
+                this.classList.add('active-touch');
+            }, { passive: true });
+        });
+
+        // Rimuovi l'effetto quando si tocca lo sfondo o si scorre
+        document.addEventListener('touchstart', function (e) {
+            if (!e.target.closest('.glass-card') && !e.target.closest('.skill-module') && !e.target.closest('.contact-item')) {
+                interactiveElements.forEach(item => item.classList.remove('active-touch'));
+            }
+        }, { passive: true });
     </script>
 </body>
 
