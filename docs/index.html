@@ -6,15 +6,10 @@
     <title>Buiar Komoni | Digital CV</title>
     <style>
         :root {
-            /* IL TUO VERDE "FILE LOCALI" */
-            --accent: #84cc16; 
-            --accent-dim: rgba(132, 204, 22, 0.15);
-            --accent-border: rgba(132, 204, 22, 0.3);
-            
-            /* Glass & UI Colors */
-            --glass-bg: rgba(255, 255, 255, 0.75);
-            --glass-border: rgba(255, 255, 255, 0.5);
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+            --accent: #84cc16; /* Verde Lime */
+            --accent-glow: rgba(132, 204, 22, 0.5);
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.6);
             --text-primary: #1d1d1f;
             --text-secondary: #6e6e73;
             --radius: 24px;
@@ -23,11 +18,11 @@
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --glass-bg: rgba(28, 28, 30, 0.75);
+                --glass-bg: rgba(28, 28, 30, 0.7);
                 --glass-border: rgba(255, 255, 255, 0.1);
                 --text-primary: #f5f5f7;
                 --text-secondary: #a1a1a6;
-                --accent-dim: rgba(132, 204, 22, 0.1);
+                --accent-glow: rgba(132, 204, 22, 0.3);
             }
         }
 
@@ -42,166 +37,109 @@
             line-height: 1.5;
         }
 
-        /* Liquid Background Animation */
         .liquid-bg {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            overflow: hidden;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;
             background: linear-gradient(135deg, #eef2f3 0%, #d9e2ec 100%);
         }
-        @media (prefers-color-scheme: dark) {
-            .liquid-bg { background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%); }
-        }
+        @media (prefers-color-scheme: dark) { .liquid-bg { background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%); } }
 
-        .blob {
-            position: absolute;
-            filter: blur(90px);
-            opacity: 0.6;
-            animation: float 25s infinite ease-in-out alternate;
-            border-radius: 50%;
+        .blob { 
+            position: absolute; filter: blur(80px); opacity: 0.6; 
+            animation: float 25s infinite ease-in-out alternate; border-radius: 50%; 
         }
-        /* Blob colorati per dare profondità al vetro */
-        .blob-1 { top: -10%; left: -10%; width: 60vw; height: 60vw; background: var(--accent); opacity: 0.25; animation-delay: 0s; }
+        .blob-1 { top: -10%; left: -10%; width: 60vw; height: 60vw; background: var(--accent); opacity: 0.2; }
         .blob-2 { bottom: -10%; right: -10%; width: 70vw; height: 70vw; background: #3b82f6; opacity: 0.15; animation-delay: -5s; }
         .blob-3 { top: 30%; left: 30%; width: 50vw; height: 50vw; background: #f472b6; opacity: 0.15; animation-delay: -10s; }
 
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(40px, 60px) scale(1.15); }
+        @keyframes float { 
+            0% { transform: translate(0, 0) scale(1); } 
+            100% { transform: translate(40px, 60px) scale(1.15); } 
         }
 
-        /* Layout & Container */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            padding-bottom: 120px;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; padding-bottom: 120px; }
 
-        /* Glass Cards */
         .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(var(--blur-strength)) saturate(180%);
+            background: var(--glass-bg); backdrop-filter: blur(var(--blur-strength)) saturate(180%);
             -webkit-backdrop-filter: blur(var(--blur-strength)) saturate(180%);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius);
-            box-shadow: var(--glass-shadow);
-            padding: 28px;
-            margin-bottom: 20px;
-            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
-        }
-        .glass-card:hover { 
-            transform: translateY(-3px); 
-            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--glass-border); border-radius: var(--radius);
+            padding: 28px; margin-bottom: 20px; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        /* Header Profile */
         .profile-header { text-align: center; padding: 40px 20px; }
         .avatar {
-            width: 110px; height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 0 4px var(--glass-bg), 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 16px;
-            background: #fff;
+            width: 110px; height: 110px; border-radius: 50%; object-fit: cover;
+            border: 3px solid var(--accent); box-shadow: 0 0 0 4px var(--glass-bg), 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 16px; background: #fff;
         }
         h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
-        .subtitle { 
-            font-size: 0.85rem; 
-            color: var(--accent); 
-            font-weight: 700; 
-            margin-bottom: 24px; 
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+        .subtitle { font-size: 0.85rem; color: var(--accent); font-weight: 700; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1.5px; }
 
-        /* Contact Grid */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 20px; }
         .contact-item {
             display: flex; align-items: center; justify-content: center; gap: 8px;
-            background: rgba(255,255,255,0.4);
-            padding: 12px; border-radius: 18px;
-            text-decoration: none; color: var(--text-primary);
-            font-size: 0.85rem; font-weight: 600;
-            transition: all 0.2s;
-            border: 1px solid transparent;
+            background: rgba(255,255,255,0.4); padding: 12px; border-radius: 18px;
+            text-decoration: none; color: var(--text-primary); font-size: 0.85rem; font-weight: 600;
+            transition: all 0.2s; border: 1px solid transparent;
         }
-        .contact-item:hover { 
-            background: var(--accent-dim); 
-            border-color: var(--accent-border);
-            color: var(--text-primary);
-        }
+        .contact-item:hover { background: rgba(132, 204, 22, 0.1); border-color: rgba(132, 204, 22, 0.3); }
         .contact-icon { width: 18px; height: 18px; fill: currentColor; }
 
-        /* Section Titles */
-        h2 { 
-            font-size: 1.4rem; 
-            margin-bottom: 20px; 
-            font-weight: 700; 
-            letter-spacing: -0.3px; 
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        h2::before {
-            content: ''; width: 4px; height: 24px; background: var(--accent); border-radius: 2px;
-        }
+        h2 { font-size: 1.4rem; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        h2::before { content: ''; width: 4px; height: 24px; background: var(--accent); border-radius: 2px; }
 
-        /* Experience Timeline */
-        .timeline-item {
-            padding-left: 24px; border-left: 2px solid var(--glass-border);
-            margin-bottom: 28px; position: relative;
-        }
+        .timeline-item { padding-left: 24px; border-left: 2px solid var(--glass-border); margin-bottom: 28px; position: relative; }
         .timeline-item:last-child { margin-bottom: 0; }
         .timeline-item::before {
-            content: ''; position: absolute; left: -6px; top: 6px;
-            width: 10px; height: 10px; border-radius: 50%;
+            content: ''; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%;
             background: var(--accent); border: 2px solid var(--glass-bg);
-            box-shadow: 0 0 0 2px var(--accent-dim);
         }
-        .timeline-date { font-size: 0.8rem; color: var(--accent); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .timeline-date { font-size: 0.8rem; color: var(--accent); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
         .timeline-role { font-size: 1.1rem; font-weight: 600; margin-bottom: 2px; }
-        .timeline-company { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 8px; font-weight: 500; }
-        .timeline-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+        .timeline-company { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 8px; }
+        .timeline-desc { font-size: 0.9rem; color: var(--text-secondary); }
 
-        /* Skills Tags */
-        .skills-container { display: flex; flex-wrap: wrap; gap: 8px; }
-        .skill-tag {
-            background: var(--accent-dim); color: var(--text-primary);
-            padding: 8px 16px; border-radius: 20px;
-            font-size: 0.8rem; font-weight: 600;
-            border: 1px solid var(--accent-border);
-            transition: all 0.2s;
+        /* GRIGLIA SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
         }
-        .skill-tag:hover { background: var(--accent); color: #000; }
+        .skill-module {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px; padding: 18px;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        
+        /* EFFETTO HOVER RETROILLUMINATO */
+        .skill-module:hover {
+            background: rgba(132, 204, 22, 0.15);
+            border-color: var(--accent);
+            box-shadow: 0 0 25px var(--accent-glow), inset 0 0 10px rgba(132, 204, 22, 0.1);
+            transform: translateY(-4px);
+        }
 
-        /* Info Grid (Lingue/Patenti) */
+        .skill-code { 
+            font-size: 0.75rem; font-weight: 800; color: var(--accent); 
+            margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .skill-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+        .skill-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
+
         .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .info-block h3 { font-size: 0.9rem; margin-bottom: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-        .info-list li { list-style: none; margin-bottom: 8px; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .info-block h3 { font-size: 0.9rem; margin-bottom: 12px; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; }
+        .info-list li { list-style: none; margin-bottom: 8px; font-size: 0.9rem; display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid rgba(0,0,0,0.05); }
         .info-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .info-list span:last-child { font-weight: 700; color: var(--text-primary); background: rgba(255,255,255,0.5); padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; }
+        .info-list span:last-child { font-weight: 700; background: rgba(255,255,255,0.5); padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; }
 
-        /* Floating Nav */
         .floating-nav {
             position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-            padding: 10px 20px; border-radius: 50px;
-            display: flex; gap: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.6); z-index: 100;
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(30px);
+            padding: 10px 20px; border-radius: 50px; display: flex; gap: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.6); z-index: 100;
         }
-        .nav-link {
-            text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.85rem;
-            transition: color 0.2s; position: relative;
-        }
+        .nav-link { text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.85rem; transition: color 0.2s; position: relative; }
         .nav-link.active, .nav-link:hover { color: var(--text-primary); }
         .nav-link.active::after {
             content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
@@ -213,46 +151,55 @@
             h1 { font-size: 1.7rem; }
             .floating-nav { width: 92%; justify-content: space-around; gap: 0; padding: 12px 10px; }
             .glass-card { padding: 20px; }
+            
+            /* MODIFICA QUI: Rende le card a tutta larghezza su mobile */
+            .skills-grid { 
+                grid-template-columns: 1fr; 
+                gap: 12px;
+            }
+            .skill-module {
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+            .skill-code { 
+                margin-bottom: 0; 
+                min-width: 50px; 
+                text-align: center;
+                background: rgba(132, 204, 22, 0.1);
+                padding: 6px 0;
+                border-radius: 10px;
+            }
+            .skill-content { flex: 1; }
+            .skill-name { margin-bottom: 2px; }
         }
     </style>
 </head>
 <body>
-
-    <!-- Animated Liquid Background -->
-    <div class="liquid-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
+    <div class="liquid-bg"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
 
     <div class="container">
-        <!-- Profile Header -->
         <header class="glass-card profile-header">
-            <img src="img/profilo_compressed.jpg" alt="Buiar Komoni" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=Buiar+Komoni&background=84cc16&color=000&size=256'">
+            <img src="img/profilo_compressed.jpg" alt="Buiar Komoni" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=BK&background=84cc16&color=000&size=256'">
             <h1>Buiar Komoni</h1>
             <p class="subtitle">Informatico di Gestione</p>
-            
             <div class="contact-grid">
                 <a href="mailto:b.komoni@gmail.com" class="contact-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    Email
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Email
                 </a>
                 <a href="tel:+41763846969" class="contact-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    Chiama
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Chiama
                 </a>
                 <div class="contact-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    Ticino, CH
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Ticino, CH
                 </div>
                 <div class="contact-item">
-                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
-                    15/06/1984
+                    <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>15/06/1984
                 </div>
             </div>
         </header>
 
-        <!-- Profilo -->
         <section id="profilo" class="glass-card">
             <h2>Profilo Personale</h2>
             <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
@@ -260,38 +207,32 @@
             </p>
         </section>
 
-        <!-- Esperienza & Studi -->
         <section id="esperienza" class="glass-card">
             <h2>Esperienza & Formazione</h2>
-            
             <div class="timeline-item">
                 <div class="timeline-date">2023 – Attuale</div>
                 <div class="timeline-role">Informatico di Gestione (SSS)</div>
                 <div class="timeline-company">SIG — Bellinzona</div>
                 <div class="timeline-desc">Diploma SSS in informatica di gestione (Formazione serale).</div>
             </div>
-
             <div class="timeline-item">
                 <div class="timeline-date">2015 – 2023</div>
                 <div class="timeline-role">Consulente Vendita</div>
                 <div class="timeline-company">Komoni Auto — Cadempino</div>
                 <div class="timeline-desc">Consulente alla vendita di autoveicoli.</div>
             </div>
-
             <div class="timeline-item">
                 <div class="timeline-date">2008 – 2009</div>
                 <div class="timeline-role">Impiegato di Commercio / Logistica</div>
                 <div class="timeline-company">Indi Logistic SA — Quartino</div>
                 <div class="timeline-desc">Gestione e consegna merce, aiuto contabilità.</div>
             </div>
-
             <div class="timeline-item">
                 <div class="timeline-date">2007 – 2008</div>
                 <div class="timeline-role">Sales Agent Swisscom</div>
                 <div class="timeline-company">Adecco SA — Lugano</div>
                 <div class="timeline-desc">Consulente alla clientela per prodotti di telecomunicazione.</div>
             </div>
-
             <div class="timeline-item">
                 <div class="timeline-date">2004 – 2005</div>
                 <div class="timeline-role">Apprendista Impiegato di Commercio</div>
@@ -300,27 +241,36 @@
             </div>
         </section>
 
-        <!-- Competenze Digitali -->
         <section id="competenze" class="glass-card">
-            <h2>Digital Skills</h2>
-            <div class="skills-container">
-                <span class="skill-tag">GNU/Linux</span>
-                <span class="skill-tag">Excel / Access</span>
-                <span class="skill-tag">Budgeting</span>
-                <span class="skill-tag">Architetture Web</span>
-                <span class="skill-tag">UML</span>
-                <span class="skill-tag">T-SQL / DB</span>
-                <span class="skill-tag">OOP / MVC</span>
-                <span class="skill-tag">React Native</span>
-                <span class="skill-tag">PHP</span>
-                <span class="skill-tag">Networking</span>
-                <span class="skill-tag">Project Management</span>
-                <span class="skill-tag">ERP Systems</span>
-                <span class="skill-tag">ITIL / SWOT</span>
+            <h2>Digital Skills (SSS)</h2>
+            <div class="skills-grid">
+                <div class="skill-module"><div class="skill-code">AMOL</div><div class="skill-content"><div class="skill-name">Ambienti operativi</div><div class="skill-desc">GNU/Linux: installazione, configurazione, sicurezza e troubleshooting.</div></div></div>
+                <div class="skill-module"><div class="skill-code">APGB</div><div class="skill-content"><div class="skill-name">Applicazioni gestionali</div><div class="skill-desc">Excel, Access, automazione e preparazione dati per management.</div></div></div>
+                <div class="skill-module"><div class="skill-code">BUDG</div><div class="skill-content"><div class="skill-name">Budgeting</div><div class="skill-desc">Budget, master budget e analisi degli scostamenti.</div></div></div>
+                <div class="skill-module"><div class="skill-code">CARC</div><div class="skill-content"><div class="skill-name">Componenti architetturali</div><div class="skill-desc">Architetture web, client-side e soluzioni moderne.</div></div></div>
+                <div class="skill-module"><div class="skill-code">CINV</div><div class="skill-content"><div class="skill-name">Calcoli di investimento</div><div class="skill-desc">Investimenti, grandezze chiave e fattibilità economica.</div></div></div>
+                <div class="skill-module"><div class="skill-code">COAN</div><div class="skill-content"><div class="skill-name">Contabilità analitica</div><div class="skill-desc">Contabilità analitica, CVP e tecniche di calcolo.</div></div></div>
+                <div class="skill-module"><div class="skill-code">COMA</div><div class="skill-content"><div class="skill-name">Concezione avanzata</div><div class="skill-desc">Analisi software, requisiti e UML.</div></div></div>
+                <div class="skill-module"><div class="skill-code">HRLG</div><div class="skill-content"><div class="skill-name">Risorse umane</div><div class="skill-desc">Pianificazione del personale e reclutamento.</div></div></div>
+                <div class="skill-module"><div class="skill-code">INAD</div><div class="skill-content"><div class="skill-name">Ingegneria dati</div><div class="skill-desc">T-SQL, oggetti DB e programmazione concettuale.</div></div></div>
+                <div class="skill-module"><div class="skill-code">INGA</div><div class="skill-content"><div class="skill-name">Inglese avanzato</div><div class="skill-desc">Inglese tecnico per lettura e comunicazione.</div></div></div>
+                <div class="skill-module"><div class="skill-code">INSA</div><div class="skill-content"><div class="skill-name">Integrazione avanzata</div><div class="skill-desc">VS Code, OOP e applicazioni MVC.</div></div></div>
+                <div class="skill-module"><div class="skill-code">INSB</div><div class="skill-content"><div class="skill-name">Integrazione base</div><div class="skill-desc">Visual Studio, OOP e applicazioni MVC.</div></div></div>
+                <div class="skill-module"><div class="skill-code">MARK</div><div class="skill-content"><div class="skill-name">Marketing</div><div class="skill-desc">Marketing digitale, dispense e casi pratici.</div></div></div>
+                <div class="skill-module"><div class="skill-code">NSAA</div><div class="skill-content"><div class="skill-name">Networking & Sicurezza</div><div class="skill-desc">HTTP, SSL, VLAN, STP e ridondanza di rete.</div></div></div>
+                <div class="skill-module"><div class="skill-code">ORGM</div><div class="skill-content"><div class="skill-name">Organizzazione strategica</div><div class="skill-desc">Organizzazione, coordinamento e strategia aziendale.</div></div></div>
+                <div class="skill-module"><div class="skill-code">PRGA</div><div class="skill-content"><div class="skill-name">Progetto avanzato</div><div class="skill-desc">Progetto complesso, rischi e Scrum.</div></div></div>
+                <div class="skill-module"><div class="skill-code">PRJM</div><div class="skill-content"><div class="skill-name">Project Management</div><div class="skill-desc">Project management, rischi e qualità.</div></div></div>
+                <div class="skill-module"><div class="skill-code">QUAS</div><div class="skill-content"><div class="skill-name">Qualità & Sicurezza</div><div class="skill-desc">Miglioramento continuo e norme ISO.</div></div></div>
+                <div class="skill-module"><div class="skill-code">RIOP</div><div class="skill-content"><div class="skill-name">Ricerca operativa</div><div class="skill-desc">Algoritmi, complessità e grafi.</div></div></div>
+                <div class="skill-module"><div class="skill-code">SIIN</div><div class="skill-content"><div class="skill-name">Sistemi integrati</div><div class="skill-desc">ERP, sistema informativo e valore strategico.</div></div></div>
+                <div class="skill-module"><div class="skill-code">SMOB</div><div class="skill-content"><div class="skill-name">Sviluppo Mobile</div><div class="skill-desc">React Native, UI e componenti riutilizzabili.</div></div></div>
+                <div class="skill-module"><div class="skill-code">STGO</div><div class="skill-content"><div class="skill-name">Governance ICT</div><div class="skill-desc">BIA, FMEA, SWOT, SLA e ITIL.</div></div></div>
+                <div class="skill-module"><div class="skill-code">STOS</div><div class="skill-content"><div class="skill-name">Open Source</div><div class="skill-desc">PHP, pagine web e classi.</div></div></div>
+                <div class="skill-module"><div class="skill-code">STPR</div><div class="skill-content"><div class="skill-name">Strumenti proprietari</div><div class="skill-desc">OOP, reports e app desktop.</div></div></div>
             </div>
         </section>
 
-        <!-- Lingue & Patenti -->
         <section class="glass-card info-grid">
             <div class="info-block">
                 <h3>Lingue</h3>
@@ -342,7 +292,6 @@
         </section>
     </div>
 
-    <!-- Floating Navigation -->
     <nav class="floating-nav">
         <a href="#profilo" class="nav-link active">Profilo</a>
         <a href="#esperienza" class="nav-link">Esperienza</a>
@@ -351,21 +300,16 @@
     </nav>
 
     <script>
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-
-        // Active state on scroll
         window.addEventListener('scroll', () => {
             let current = '';
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 200) current = section.getAttribute('id');
+            document.querySelectorAll('section').forEach(section => {
+                if (pageYOffset >= section.offsetTop - 200) current = section.getAttribute('id');
             });
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
@@ -375,4 +319,3 @@
     </script>
 </body>
 </html>
-
